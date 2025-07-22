@@ -1,5 +1,5 @@
 // Projeto-Circuitos-Digitais //
 
-Apenas os arquivos .panda do projeto
+Apenas os arquivos e instruções .panda do projeto
 
 
