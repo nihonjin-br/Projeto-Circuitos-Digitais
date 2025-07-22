@@ -1,0 +1,47 @@
+1. Configure as Entradas dos Sensores
+-Nível Atual da Caixa (4 bits)
+Use 4 botões para representar o nível atual da água em binário.
+
+Por exemplo: nível "6" = 0110.
+
+-Nível Anterior da Caixa (4 bits)
+Configure os 4 botões ao lado como o valor da leitura anterior.
+
+Exemplo: "6" = 0110.
+
+-Sensor de Fluxo (4 bits)
+Qualquer botão ligado (1) indica que a água está passando no cano.
+
+Exemplo: 0001 ou 0010 ou 1000 → fluxo ativo.
+
+-Sensor de Vibração 
+Botão individual. Quando pressionado (1), simula vibração no cano.
+
+2. Como o Circuito Toma Decisão
+-O sistema ativa o sinal de alerta quando TODAS as seguintes condições forem verdadeiras:
+
+-Nível atual = nível anterior 
+
+-Existe fluxo de água 
+
+-Vibração detectada (botão ativado)
+
+3. Ativando o Alerta
+Quando as três condições estão satisfeitas:
+
+A saída lógica final se torna 1
+
+Pressione o botão do Clock para registrar essa condição no Flip-Flop tipo D
+
+Isso acende o LED de alerta e mantém o aviso ativo até resetar o circuito.
+
+4. Visualização com Multiplexador
+Use dois botões (S1 e S0) para selecionar o que o display de 4 bits mostra:
+
+00 → mostra o nível atual
+
+01 → mostra o nível anterior
+
+10 → mostra os bits de fluxo
+
+11 → mostra o estado de alerta replicado
